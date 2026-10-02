@@ -1,3 +1,8 @@
+const SUPABASE_URL = "https://lszqzprmovabzrwlekzq.supabase.co"; // Ganti dengan Project URL Supabase Anda
+const SUPABASE_KEY = "sb_publishable_xje_ZSuWI5tb3BHAjTvJPw_VH0FBa9D"; // Ganti dengan Publishable / ANON Key Supabase Anda
+
+const supabase = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
 const state = { customers: [], items: [], sales: [], cart: [], report: [], activeSale: null };
 const money = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 });
 const dateFormatter = new Intl.DateTimeFormat("id-ID", { day: "2-digit", month: "short", year: "numeric" });
